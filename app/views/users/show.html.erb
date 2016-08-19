@@ -1,0 +1,24 @@
+<%#= @user.name %><%#= @user.email %><%#= @user.created_at %><%#= @user.updated_at %>  <%#= Time.now.year %>
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+  <!--
+  <div class="col-md-6">
+    <div class="alert alert-danger">Mensaje de Error</div>
+    <div class="alert alert-success">Mensaje de Exito</div>
+    <div class="alert alert-info">Mensaje de Informacion</div>
+    <div class="alert alert-warning">Mensaje de Advertencia</div>
+  </div>-->
+
+  <!--https://github.com/twbs/bootstrap/blob/master/less/variables.less-->
+  <!--http://www.w3schools.com/bootstrap/bootstrap_alerts.asp-->
+  
+</div>
+<!--https://www.youtube.com/watch?v=jbXZQnGkAOY  Gravatar Rails Casts-->
