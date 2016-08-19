@@ -7,13 +7,15 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="icon" type="image/png" href="favicon.ico">
     <%= render 'layouts/shim' %>
   </head>
   <body>
   <%= render 'layouts/header' %>
     <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
+        <div class="col-md-8 col-md-offset-2  alert alert-<%= message_type %>"><%= message %></div>
+        <br><br><br>
+    <% end %>
     <div class="container">
     <%= yield %>
     <%= render 'layouts/footer' %>
